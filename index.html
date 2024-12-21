@@ -6,16 +6,16 @@
     <title>Curriculum Vitae - Geraldine Bracho</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f0f8ff;
             color: #333;
         }
         header {
             text-align: center;
             padding: 20px;
-            background-color: #4CAF50;
+            background-color: #8a2be2;
             color: white;
         }
         header h1, header p {
@@ -24,10 +24,11 @@
         section {
             padding: 20px;
             max-width: 800px;
-            margin: auto;
+            margin: 20px auto;
             background: white;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #8a2be2;
         }
         .carousel {
             display: flex;
@@ -44,7 +45,7 @@
             width: 100%;
             max-width: 800px;
             display: none;
-            border-radius: 5px;
+            border-radius: 8px;
         }
         .carousel img.active {
             display: block;
@@ -53,18 +54,26 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.6);
             color: white;
             border: none;
             padding: 10px;
             cursor: pointer;
             font-size: 20px;
+            border-radius: 50%;
         }
         .carousel button.prev {
             left: 10px;
         }
         .carousel button.next {
             right: 10px;
+        }
+        a {
+            color: #8a2be2;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -73,7 +82,9 @@
 <header>
     <h1>Curriculum Vitae</h1>
     <p>Geraldine Noreidis Bracho Morales</p>
-    <p>Email: gbracho85@gmail.com | Tel: +56 933043606 | <a href="https://www.linkedin.com/in/geraldine-bracho-71463aaa/" style="color: white;">LinkedIn</a></p>
+    <p>Dirección: Chiloé 1221, Santiago Centro, Santiago de Chile</p>
+    <p>Email: gbracho85@gmail.com | Tel: +56 933043606 (WhatsApp: +56 9 9474 4792) | <a href="https://www.linkedin.com/in/geraldine-bracho-71463aaa/" target="_blank">LinkedIn</a></p>
+    <p>Visa: Definitiva | Fecha de Nacimiento: 19-01-1988</p>
 </header>
 
 <section>
@@ -83,23 +94,86 @@
 </section>
 
 <section>
-    <h2>Certificaciones</h2>
-    <div class="carousel">
-        <button class="prev">&laquo;</button>
-        <img src="certificados/certificado1.png" alt="Certificado 1" class="active">
-        <img src="certificados/certificado2.png" alt="Certificado 2">
-        <img src="certificados/certificado3.png" alt="Certificado 3">
-        <button class="next">&raquo;</button>
-    </div>
+    <h2>Certificaciones y Cursos</h2>
+    <ul>
+        <li>Product Owner (Básico)</li>
+        <li>Design Thinking (Básico)</li>
+        <li>Gestión de Proyectos con Metodologías Ágiles y Enfoques Lean (Básico)</li>
+        <li>User Stories Foundations Certificate (Básico)</li>
+        <li>Especialización Product Owner (Básico)</li>
+        <li>Curso de Herramientas y Frameworks Intermedias para Product Owners (Básico)</li>
+        <li>Curso de Automatización de Pruebas UI con Cypress (Básico)</li>
+        <li>Curso de Análisis de Datos con Power BI (Básico)</li>
+        <li>Curso de Automatización de Test con Playwright (Básico)</li>
+        <li>Curso de Agile Testing Empowered (Intermedio)</li>
+        <li>Selenium Esencial (Básico)</li>
+        <li>Fundamentos de la Programación: Pruebas de Software y QA (Intermedio)</li>
+        <li>CGPS - Curso de Gestión de Prueba de Software (Intermedio)</li>
+        <li>SQL Fundamentals Course (Intermedio)</li>
+        <li>Master: Pruebas de Rendimiento con Apache JMeter (Español) (Intermedio)</li>
+        <li>iSQI Certification Days 2020</li>
+        <li>Curso ISTQB (Intermedio)</li>
+        <li>A4Q World Congress</li>
+    </ul>
 </section>
 
 <section>
     <h2>Experiencia Profesional</h2>
-    <p><strong>Analista QA</strong> en Vigatec (Junio 2022 - Actualidad)<br>
-    Análisis de requerimientos, automatización y pruebas de rendimiento.</p>
-    <p><strong>Analista de Sistemas</strong> en Newhotel Software Spa (2020 - 2022)<br>
-    Gestión de proyectos e integraciones.</p>
-    <!-- Agregar más experiencias aquí -->
+    <p><strong>Vigatec (Junio 2022 - Actualidad)</strong><br>
+    Cargo: Analista QA<br>
+    Responsabilidades:</p>
+    <ul>
+        <li>Análisis de requerimientos y diseño de casos de prueba.</li>
+        <li>Automatización y pruebas de rendimiento con JMeter.</li>
+        <li>Gestión y validación de datos en bases de datos.</li>
+    </ul>
+    <p>Proyectos Destacados:</p>
+    <ul>
+        <li>Proyecto Smartic (2022-Actualmente).</li>
+        <li>Proyecto Contratista (2022).</li>
+        <li>Proyecto Kiosko Emisión (2022).</li>
+        <li>Proyecto DVM - Walmart (2023-Actualmente).</li>
+    </ul>
+
+    <p><strong>Newhotel Software Spa (Diciembre 2020 - Enero 2022)</strong><br>
+    Cargo: Analista de Sistemas<br>
+    Responsabilidades:</p>
+    <ul>
+        <li>Gestión de proyectos y soporte técnico en ERP.</li>
+        <li>Implementación de integraciones como e-GDS, SiteMinder, Synxis, y TravelClick.</li>
+    </ul>
+    <p>Logros:</p>
+    <ul>
+        <li>Proyecto POS (2020).</li>
+        <li>Proyecto STOCK (2021).</li>
+        <li>Proyecto NEWHOTEL (2021).</li>
+    </ul>
+
+    <p><strong>Geoxite Ltda (Julio 2019 - Diciembre 2020)</strong><br>
+    Cargo: FullStack Developer Junior<br>
+    Responsabilidades:</p>
+    <ul>
+        <li>Desarrollo de soluciones para sistemas APR y Condominio.</li>
+    </ul>
+    <p>Logros:</p>
+    <ul>
+        <li>Proyecto Condominio (2019).</li>
+        <li>Proyecto APR (2020).</li>
+    </ul>
+
+    <p><strong>SoloVerde (Mayo 2019 - Agosto 2019)</strong><br>
+    Cargo: Analista QA<br>
+    Responsabilidades:</p>
+    <ul>
+        <li>Planificación y ejecución de pruebas funcionales, integrales y unitarias.</li>
+    </ul>
+
+    <p><strong>ALI 3000 Consultores, C.A. (Octubre 2015 - Septiembre 2017)</strong><br>
+    Cargo: Developer Junior<br>
+    Responsabilidades:</p>
+    <ul>
+        <li>Desarrollo con Oracle Forms y Oracle Reports.</li>
+    </ul>
 </section>
 
 <script>
