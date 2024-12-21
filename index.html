@@ -3,25 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi primera página</title>
+    <title>Mi CV</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             background-color: #f4f4f4;
-        }
-        h1 {
             color: #333;
         }
-        p {
-            color: #666;
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+        }
+        header h1 {
+            margin: 0;
+        }
+        section {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .accordion {
+            cursor: pointer;
+            padding: 15px;
+            border: none;
+            outline: none;
+            background-color: #eee;
+            color: #333;
+            text-align: left;
+            font-size: 16px;
+            margin-top: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .accordion:hover {
+            background-color: #ddd;
+        }
+        .panel {
+            padding: 0 15px;
+            display: none;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            border-left: 2px solid #4CAF50;
+            margin-top: 5px;
+        }
+        .panel img {
+            max-width: 100%;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-    <h1>¡Bienvenido a mi página web!</h1>
-    <p>Esta es mi primera página creada con GitHub Pages.</p>
+
+<header>
+    <h1>Mi Curriculum Vitae</h1>
+    <p>Nombre: Andrés<br>Email: andres@correo.com<br>Teléfono: +56 123 456 789</p>
+</header>
+
+<section>
+    <h2>Certificados</h2>
+    <!-- Acordeón -->
+    <button class="accordion">Certificado 1: Curso de Python</button>
+    <div class="panel">
+        <p>Este certificado demuestra mi conocimiento en Python.</p>
+        <img src="certificados/certificado1.png" alt="Certificado de Python">
+    </div>
+
+    <button class="accordion">Certificado 2: Desarrollo Web</button>
+    <div class="panel">
+        <p>Este certificado demuestra mi experiencia en desarrollo web.</p>
+        <img src="certificados/certificado2.png" alt="Certificado de Desarrollo Web">
+    </div>
+
+    <button class="accordion">Certificado 3: Cloud Computing</button>
+    <div class="panel">
+        <p>Certificado de conocimientos en la nube.</p>
+        <img src="certificados/certificado3.png" alt="Certificado de Cloud Computing">
+    </div>
+</section>
+
+<script>
+    // Lógica para el acordeón
+    const accordions = document.querySelectorAll('.accordion');
+    accordions.forEach(acc => {
+        acc.addEventListener('click', () => {
+            acc.classList.toggle('active');
+            const panel = acc.nextElementSibling;
+            if (panel.style.display === 'block') {
+                panel.style.display = 'none';
+            } else {
+                panel.style.display = 'block';
+            }
+        });
+    });
+</script>
+
 </body>
 </html>
+
