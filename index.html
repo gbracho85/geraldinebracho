@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi CV</title>
+    <title>Curriculum Vitae - Geraldine Bracho</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -18,7 +18,7 @@
             background-color: #4CAF50;
             color: white;
         }
-        header h1 {
+        header h1, header p {
             margin: 0;
         }
         section {
@@ -27,83 +27,103 @@
             margin: auto;
             background: white;
             border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        .accordion {
-            cursor: pointer;
-            padding: 15px;
-            border: none;
-            outline: none;
-            background-color: #eee;
-            color: #333;
-            text-align: left;
-            font-size: 16px;
-            margin-top: 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .accordion:hover {
-            background-color: #ddd;
-        }
-        .panel {
-            padding: 0 15px;
-            display: none;
+        .carousel {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
             overflow: hidden;
-            background-color: #f9f9f9;
-            border-left: 2px solid #4CAF50;
-            margin-top: 5px;
+            width: 100%;
+            max-width: 800px;
+            height: 300px;
+            margin: 20px auto;
         }
-        .panel img {
-            max-width: 100%;
+        .carousel img {
+            width: 100%;
+            max-width: 800px;
+            display: none;
             border-radius: 5px;
+        }
+        .carousel img.active {
+            display: block;
+        }
+        .carousel button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .carousel button.prev {
+            left: 10px;
+        }
+        .carousel button.next {
+            right: 10px;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Mi Curriculum Vitae</h1>
-    <p>Nombre: Andrés<br>Email: andres@correo.com<br>Teléfono: +56 123 456 789</p>
+    <h1>Curriculum Vitae</h1>
+    <p>Geraldine Noreidis Bracho Morales</p>
+    <p>Email: gbracho85@gmail.com | Tel: +56 933043606 | <a href="https://www.linkedin.com/in/geraldine-bracho-71463aaa/" style="color: white;">LinkedIn</a></p>
 </header>
 
 <section>
-    <h2>Certificados</h2>
-    <!-- Acordeón -->
-    <button class="accordion">Certificado 1: Curso de Python</button>
-    <div class="panel">
-        <p>Este certificado demuestra mi conocimiento en Python.</p>
-        <img src="certificados/certificado1.png" alt="Certificado de Python">
-    </div>
+    <h2>Educación Formal</h2>
+    <p><strong>Ingeniero en Sistemas</strong><br>
+    Universidad Nacional Experimental Politécnica de la Fuerza Armada Nacional, Venezuela (2007-2013)</p>
+</section>
 
-    <button class="accordion">Certificado 2: Desarrollo Web</button>
-    <div class="panel">
-        <p>Este certificado demuestra mi experiencia en desarrollo web.</p>
-        <img src="certificados/certificado2.png" alt="Certificado de Desarrollo Web">
-    </div>
-
-    <button class="accordion">Certificado 3: Cloud Computing</button>
-    <div class="panel">
-        <p>Certificado de conocimientos en la nube.</p>
-        <img src="certificados/certificado3.png" alt="Certificado de Cloud Computing">
+<section>
+    <h2>Certificaciones</h2>
+    <div class="carousel">
+        <button class="prev">&laquo;</button>
+        <img src="certificados/certificado1.png" alt="Certificado 1" class="active">
+        <img src="certificados/certificado2.png" alt="Certificado 2">
+        <img src="certificados/certificado3.png" alt="Certificado 3">
+        <button class="next">&raquo;</button>
     </div>
 </section>
 
+<section>
+    <h2>Experiencia Profesional</h2>
+    <p><strong>Analista QA</strong> en Vigatec (Junio 2022 - Actualidad)<br>
+    Análisis de requerimientos, automatización y pruebas de rendimiento.</p>
+    <p><strong>Analista de Sistemas</strong> en Newhotel Software Spa (2020 - 2022)<br>
+    Gestión de proyectos e integraciones.</p>
+    <!-- Agregar más experiencias aquí -->
+</section>
+
 <script>
-    // Lógica para el acordeón
-    const accordions = document.querySelectorAll('.accordion');
-    accordions.forEach(acc => {
-        acc.addEventListener('click', () => {
-            acc.classList.toggle('active');
-            const panel = acc.nextElementSibling;
-            if (panel.style.display === 'block') {
-                panel.style.display = 'none';
-            } else {
-                panel.style.display = 'block';
-            }
+    const images = document.querySelectorAll('.carousel img');
+    const prevButton = document.querySelector('.carousel .prev');
+    const nextButton = document.querySelector('.carousel .next');
+    let currentIndex = 0;
+
+    function showImage(index) {
+        images.forEach((img, i) => {
+            img.classList.toggle('active', i === index);
         });
+    }
+
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+        showImage(currentIndex);
+    });
+
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+        showImage(currentIndex);
     });
 </script>
 
 </body>
 </html>
-
