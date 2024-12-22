@@ -9,13 +9,13 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f8ff;
+            background-color: #f7f9fc;
             color: #333;
         }
         header {
             text-align: center;
             padding: 20px;
-            background-color: #8a2be2;
+            background-color: #6a1b9a;
             color: white;
         }
         header h1, header p {
@@ -28,51 +28,33 @@
             background: white;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-left: 5px solid #8a2be2;
+            border-left: 5px solid #6a1b9a;
         }
-        .carousel {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            max-width: 800px;
-            height: 300px;
-            margin: 20px auto;
+        .datos-personales p, .experiencia p, .educacion p, .certificaciones p {
+            margin: 0;
+            padding: 5px 0;
         }
-        .carousel img {
-            width: 100%;
-            max-width: 800px;
-            display: none;
-            border-radius: 8px;
+        .section-title {
+            color: #6a1b9a;
+            border-bottom: 2px solid #6a1b9a;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
         }
-        .carousel img.active {
-            display: block;
+        ul {
+            list-style-type: none;
+            padding: 0;
         }
-        .carousel button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.6);
-            color: white;
-            border: none;
+        ul li {
+            background: #e1bee7;
+            margin: 5px 0;
             padding: 10px;
-            cursor: pointer;
-            font-size: 20px;
-            border-radius: 50%;
+            border-radius: 4px;
         }
-        .carousel button.prev {
-            left: 10px;
-        }
-        .carousel button.next {
-            right: 10px;
-        }
-        a {
-            color: #8a2be2;
+        .contact-info a {
+            color: #6a1b9a;
             text-decoration: none;
         }
-        a:hover {
+        .contact-info a:hover {
             text-decoration: underline;
         }
     </style>
@@ -82,19 +64,77 @@
 <header>
     <h1>Curriculum Vitae</h1>
     <p>Geraldine Noreidis Bracho Morales</p>
-    <p>Dirección: Chiloé 1221, Santiago Centro, Santiago de Chile</p>
-    <p>Email: gbracho85@gmail.com | Tel: +56 933043606 (WhatsApp: +56 9 9474 4792) | <a href="https://www.linkedin.com/in/geraldine-bracho-71463aaa/" target="_blank">LinkedIn</a></p>
-    <p>Visa: Definitiva | Fecha de Nacimiento: 19-01-1988</p>
+    <div class="contact-info">
+        <p>Dirección: Chiloé 1221, Santiago Centro, Santiago de Chile</p>
+        <p>Email: <a href="mailto:gbracho85@gmail.com">gbracho85@gmail.com</a></p>
+        <p>Teléfono: +56 933043606 (WhatsApp: +56 9 9474 4792)</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/geraldine-bracho-71463aaa/" target="_blank">Geraldine Bracho</a></p>
+        <p>Visa: Definitiva | Fecha de Nacimiento: 19-01-1988</p>
+    </div>
 </header>
 
-<section>
-    <h2>Educación Formal</h2>
+<section class="objetivo">
+    <h2 class="section-title">Objetivo Profesional</h2>
+    <p>Ingeniera en Sistemas con más de 7 años de experiencia en pruebas de software, desarrollo y gestión de proyectos. Busco oportunidades para aplicar mis habilidades en un entorno dinámico y colaborativo.</p>
+</section>
+
+<section class="experiencia">
+    <h2 class="section-title">Experiencia Profesional</h2>
+    <p><strong>Analista QA, Vigatec</strong> (Junio 2022 - Actualidad)</p>
+    <ul>
+        <li>Análisis de requerimientos y diseño de casos de prueba.</li>
+        <li>Automatización y pruebas de rendimiento con JMeter.</li>
+        <li>Gestión y validación de datos en bases de datos.</li>
+    </ul>
+    <p><strong>Proyectos Destacados:</strong></p>
+    <ul>
+        <li>Proyecto Smartic (2022-Actualmente).</li>
+        <li>Proyecto Contratista (2022).</li>
+        <li>Proyecto Kiosko Emisión (2022).</li>
+        <li>Proyecto DVM - Walmart (2023-Actualmente).</li>
+    </ul>
+
+    <p><strong>Analista de Sistemas, Newhotel Software Spa</strong> (Diciembre 2020 - Enero 2022)</p>
+    <ul>
+        <li>Gestión de proyectos y soporte técnico en ERP.</li>
+        <li>Implementación de integraciones como e-GDS, SiteMinder, Synxis, y TravelClick.</li>
+    </ul>
+    <p><strong>Logros:</strong></p>
+    <ul>
+        <li>Proyecto POS (2020).</li>
+        <li>Proyecto STOCK (2021).</li>
+        <li>Proyecto NEWHOTEL (2021).</li>
+    </ul>
+
+    <p><strong>FullStack Developer Junior, Geoxite Ltda</strong> (Julio 2019 - Diciembre 2020)</p>
+    <ul>
+        <li>Desarrollo de soluciones para sistemas APR y Condominio.</li>
+    </ul>
+    <p><strong>Proyectos:</strong></p>
+    <ul>
+        <li>Proyecto Condominio (2019).</li>
+        <li>Proyecto APR (2020).</li>
+    </ul>
+
+    <p><strong>Analista QA, SoloVerde</strong> (Mayo 2019 - Agosto 2019)</p>
+    <ul>
+        <li>Planificación y ejecución de pruebas funcionales, integrales y unitarias.</li>
+    </ul>
+
+    <p><strong>Developer Junior, ALI 3000 Consultores, C.A.</strong> (Octubre 2015 - Septiembre 2017)</p>
+    <ul>
+        <li>Desarrollo con Oracle Forms y Oracle Reports.</li>
+    </ul>
+</section>
+
+<section class="educacion">
+    <h2 class="section-title">Educación Formal</h2>
     <p><strong>Ingeniero en Sistemas</strong><br>
     Universidad Nacional Experimental Politécnica de la Fuerza Armada Nacional, Venezuela (2007-2013)</p>
 </section>
 
-<section>
-    <h2>Certificaciones y Cursos</h2>
+<section class="certificaciones">
+    <h2 class="section-title">Certificaciones y Cursos</h2>
     <ul>
         <li>Product Owner (Básico)</li>
         <li>Design Thinking (Básico)</li>
@@ -113,91 +153,4 @@
         <li>Master: Pruebas de Rendimiento con Apache JMeter (Español) (Intermedio)</li>
         <li>iSQI Certification Days 2020</li>
         <li>Curso ISTQB (Intermedio)</li>
-        <li>A4Q World Congress</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Experiencia Profesional</h2>
-    <p><strong>Vigatec (Junio 2022 - Actualidad)</strong><br>
-    Cargo: Analista QA<br>
-    Responsabilidades:</p>
-    <ul>
-        <li>Análisis de requerimientos y diseño de casos de prueba.</li>
-        <li>Automatización y pruebas de rendimiento con JMeter.</li>
-        <li>Gestión y validación de datos en bases de datos.</li>
-    </ul>
-    <p>Proyectos Destacados:</p>
-    <ul>
-        <li>Proyecto Smartic (2022-Actualmente).</li>
-        <li>Proyecto Contratista (2022).</li>
-        <li>Proyecto Kiosko Emisión (2022).</li>
-        <li>Proyecto DVM - Walmart (2023-Actualmente).</li>
-    </ul>
-
-    <p><strong>Newhotel Software Spa (Diciembre 2020 - Enero 2022)</strong><br>
-    Cargo: Analista de Sistemas<br>
-    Responsabilidades:</p>
-    <ul>
-        <li>Gestión de proyectos y soporte técnico en ERP.</li>
-        <li>Implementación de integraciones como e-GDS, SiteMinder, Synxis, y TravelClick.</li>
-    </ul>
-    <p>Logros:</p>
-    <ul>
-        <li>Proyecto POS (2020).</li>
-        <li>Proyecto STOCK (2021).</li>
-        <li>Proyecto NEWHOTEL (2021).</li>
-    </ul>
-
-    <p><strong>Geoxite Ltda (Julio 2019 - Diciembre 2020)</strong><br>
-    Cargo: FullStack Developer Junior<br>
-    Responsabilidades:</p>
-    <ul>
-        <li>Desarrollo de soluciones para sistemas APR y Condominio.</li>
-    </ul>
-    <p>Logros:</p>
-    <ul>
-        <li>Proyecto Condominio (2019).</li>
-        <li>Proyecto APR (2020).</li>
-    </ul>
-
-    <p><strong>SoloVerde (Mayo 2019 - Agosto 2019)</strong><br>
-    Cargo: Analista QA<br>
-    Responsabilidades:</p>
-    <ul>
-        <li>Planificación y ejecución de pruebas funcionales, integrales y unitarias.</li>
-    </ul>
-
-    <p><strong>ALI 3000 Consultores, C.A. (Octubre 2015 - Septiembre 2017)</strong><br>
-    Cargo: Developer Junior<br>
-    Responsabilidades:</p>
-    <ul>
-        <li>Desarrollo con Oracle Forms y Oracle Reports.</li>
-    </ul>
-</section>
-
-<script>
-    const images = document.querySelectorAll('.carousel img');
-    const prevButton = document.querySelector('.carousel .prev');
-    const nextButton = document.querySelector('.carousel .next');
-    let currentIndex = 0;
-
-    function showImage(index) {
-        images.forEach((img, i) => {
-            img.classList.toggle('active', i === index);
-        });
-    }
-
-    prevButton.addEventListener('click', () => {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
-        showImage(currentIndex);
-    });
-
-    nextButton.addEventListener('click', () => {
-        currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
-        showImage(currentIndex);
-    });
-</script>
-
-</body>
-</html>
+        <li>A4Q World Congress
